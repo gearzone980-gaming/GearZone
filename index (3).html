@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+   <meta name="google-site-verification" content="hXjxfQinBhkFTHmUxzf_yrnbHUSpfnmYmME76yPzkds" /> 
+  <title>GearZone – Le Meilleur Matériel Gaming 2026</title>
+  <meta name="description" content="Comparatifs et bons plans sur le meilleur matériel gaming. Claviers, casques, souris, écrans gaming au meilleur prix." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- GOOGLE ADSENSE : remplace ca-pub-XXXXXXXXXXXXXXXX par ton vrai ID -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f14; --bg2: #14171f; --bg3: #1c2030;
+      --accent: #e8ff00; --accent2: #ff4500;
+      --text: #f0f0f0; --text2: #9aa0b8;
+      --border: rgba(255,255,255,0.07);
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,15,20,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 2px; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--text); }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* HERO */
+    .hero { padding: 90px 5% 70px; text-align: center; background: var(--bg); position: relative; overflow: hidden; }
+    .hero::before { content:''; position:absolute; top:-30%; left:50%; transform:translateX(-50%); width:600px; height:600px; background:radial-gradient(circle,rgba(232,255,0,0.05) 0%,transparent 70%); pointer-events:none; }
+    .hero-badge { display:inline-block; background:rgba(232,255,0,0.1); color:var(--accent); border:1px solid rgba(232,255,0,0.25); padding:5px 14px; border-radius:100px; font-size:0.75rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:1.2rem; }
+    .hero h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.8rem,8vw,5.5rem); line-height:1; letter-spacing:2px; margin-bottom:1.2rem; }
+    .hero h1 span { color:var(--accent); }
+    .hero p { font-size:1rem; color:var(--text2); max-width:500px; margin:0 auto 2rem; }
+    .btn { display:inline-block; padding:12px 28px; background:var(--accent); color:#000; font-weight:700; font-size:0.9rem; border-radius:8px; text-decoration:none; transition:transform .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-outline { background:transparent; color:var(--text); border:1px solid var(--border); margin-left:0.75rem; }
+    .btn-outline:hover { border-color:var(--accent); color:var(--accent); transform:none; }
+
+    /* CATEGORY TABS */
+    .cat-tabs { display:flex; gap:10px; flex-wrap:wrap; padding: 0 5% 0; margin-bottom: 0; }
+    .cat-tab { padding:8px 18px; border-radius:100px; font-size:0.82rem; font-weight:700; cursor:pointer; border:1px solid var(--border); background:transparent; color:var(--text2); transition:all .2s; }
+    .cat-tab.active, .cat-tab:hover { background:var(--accent); color:#000; border-color:var(--accent); }
+
+    /* SECTIONS */
+    .cat-section { padding: 50px 5%; }
+    .cat-section + .cat-section { padding-top: 20px; }
+    .section-label { font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:0.4rem; }
+    .section-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); letter-spacing:1px; margin-bottom:1.5rem; }
+
+    /* CARDS */
+    .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:20px; }
+    .card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:transform .25s, border-color .25s; }
+    .card:hover { transform:translateY(-4px); border-color:rgba(232,255,0,0.2); }
+    .card-img { width:100%; height:160px; object-fit:contain; background:#1a1d26; display:block; padding:12px; }
+    .card-img-placeholder { width:100%; height:160px; background:var(--bg3); display:flex; align-items:center; justify-content:center; font-size:3rem; }
+    .card-body { padding:1rem; }
+    .card-tag { display:inline-block; padding:3px 10px; border-radius:100px; font-size:0.7rem; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:0.6rem; }
+    .tag-clavier { background:rgba(100,160,255,0.12); color:#64a0ff; }
+    .tag-casque  { background:rgba(232,255,0,0.12); color:var(--accent); }
+    .tag-souris  { background:rgba(255,69,0,0.14); color:#ff7043; }
+    .tag-ecran   { background:rgba(0,220,180,0.12); color:#00dcb4; }
+    .stars { color:#f5c518; font-size:0.82rem; margin-bottom:0.4rem; }
+    .card h3 { font-size:0.95rem; font-weight:700; margin-bottom:0.35rem; line-height:1.3; }
+    .card p { font-size:0.82rem; color:var(--text2); margin-bottom:0.9rem; line-height:1.45; }
+    .card-footer { display:flex; align-items:center; justify-content:space-between; }
+    .price { font-family:'Bebas Neue',sans-serif; font-size:1.35rem; color:var(--accent); letter-spacing:1px; }
+    .price-old { font-size:0.75rem; color:var(--text2); text-decoration:line-through; margin-left:5px; }
+    .btn-sm { padding:7px 15px; font-size:0.78rem; border-radius:6px; background:var(--accent); color:#000; font-weight:700; text-decoration:none; white-space:nowrap; transition:opacity .2s; }
+    .btn-sm:hover { opacity:0.85; }
+
+    /* BADGE PROMO */
+    .badge-promo { display:inline-block; background:rgba(255,69,0,0.18); color:#ff6b35; font-size:0.68rem; font-weight:700; padding:2px 8px; border-radius:4px; margin-left:6px; vertical-align:middle; }
+
+    /* AD BOX */
+    .ad-box { background:var(--bg3); border:1px dashed rgba(255,255,255,0.1); border-radius:8px; padding:1.5rem; text-align:center; color:var(--text2); font-size:0.82rem; margin:0 5% 2rem; }
+    .ad-box strong { display:block; margin-bottom:0.2rem; color:var(--text); }
+
+    /* FOOTER */
+    footer { background:var(--bg2); border-top:1px solid var(--border); padding:2.5rem 5%; text-align:center; margin-top:2rem; }
+    .footer-links { display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin:1rem 0; }
+    .footer-links a { color:var(--text2); text-decoration:none; font-size:0.82rem; }
+    .footer-links a:hover { color:var(--accent); }
+    .affiliate-notice { margin-top:1.5rem; padding:0.85rem; background:var(--bg3); border-radius:8px; color:var(--text2); font-size:0.75rem; max-width:580px; margin-inline:auto; }
+
+    @media(max-width:600px) { .nav-links { display:none; } .btn-outline { display:none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Gear<span>Zone</span></a>
+  <ul class="nav-links">
+    <li><a href="#claviers">Claviers</a></li>
+    <li><a href="#casques">Casques</a></li>
+    <li><a href="#souris">Souris</a></li>
+    <li><a href="#ecrans">Écrans</a></li>
+    <li><a href="#articles">Guides</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-badge">🎮 Meilleur matériel gaming 2026</div>
+  <h1>Choisis ton <span>setup</span><br>comme un pro</h1>
+  <p>Comparatifs honnêtes et bons plans sur le meilleur matériel gaming. On t'aide à dépenser malin.</p>
+  <a href="#claviers" class="btn">Voir les produits</a>
+  <a href="#articles" class="btn btn-outline">Nos guides</a>
+</header>
+
+<div class="ad-box">
+  <strong>Espace publicitaire</strong>
+  Remplace ce bloc par ton code Google AdSense une fois approuvé
+</div>
+
+<!-- ═══════════════ CLAVIERS ═══════════════ -->
+<section class="cat-section" id="claviers">
+  <div class="section-label">⌨️ Claviers Gaming</div>
+  <h2 class="section-title">Claviers Mécaniques</h2>
+  <div class="cards">
+
+    <!-- Geeky GK61 -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/719D-JPXNBL._AC_SX450_.jpg" alt="Geeky GK61 60%" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">⌨️</div>
+      <div class="card-body">
+        <span class="card-tag tag-clavier">Clavier 60%</span>
+        <div class="stars">★★★★☆</div>
+        <h3>Geeky GK61 60%</h3>
+        <p>Format ultra-compact hot-swappable. Switches interchangeables sans soudure, RGB 16M couleurs. Idéal pour les petits bureaux.</p>
+        <div class="card-footer">
+          <div><span class="price">29,99€</span></div>
+          <a href="https://www.amazon.fr/Geeky-GK61-60-R%C3%A9tro%C3%A9clair%C3%A9es-Mechanical/dp/B0C77DHJSZ/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-2" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Royal Kludge R65 -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/61hOhuiqrTL._AC_SX679_.jpg" alt="Royal Kludge R65" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">⌨️</div>
+      <div class="card-body">
+        <span class="card-tag tag-clavier">Clavier 60%</span>
+        <div class="stars">★★★★☆</div>
+        <h3>Royal Kludge R65</h3>
+        <p>Format 60% compact avec touches fléchées. Hot-swap, RGB, compatible PC et Mac. Excellent rapport qualité-prix.</p>
+        <div class="card-footer">
+          <div><span class="price">63,02€</span></div>
+          <a href="https://www.amazon.fr/ROYAL-KLUDGE-R65-r%C3%A9tro%C3%A9clair%C3%A9-interrupteur/dp/B0CNP1BG1W/ref=sr_1_3?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-3" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Royal Kludge R75 -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/61DmMRB6wkL._AC_SX522_.jpg" alt="Royal Kludge R75" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">⌨️</div>
+      <div class="card-body">
+        <span class="card-tag tag-clavier">Clavier 75%</span>
+        <div class="stars">★★★★☆</div>
+        <h3>Royal Kludge R75</h3>
+        <p>Format 75% avec pavé de navigation complet. Switches hot-swap, boîtier en aluminium, RGB personnalisable.</p>
+        <div class="card-footer">
+          <div><span class="price">60€</span></div>
+          <a href="https://www.amazon.fr/ROYAL-KLUDGE-R75-commutateurs-r%C3%A9tro%C3%A9clairage/dp/B0CJ2LXNFN/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-5" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logitech K835 TKL -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/61RQC2pCfWL._AC_SX679_.jpg" alt="Logitech K835 TKL" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">⌨️</div>
+      <div class="card-body">
+        <span class="card-tag tag-clavier">Clavier TKL</span>
+        <div class="stars">★★★★☆</div>
+        <h3>Logitech K835 TKL</h3>
+        <p>TKL sans pavé numérique, switches Cherry MX fiables, construction solide en aluminium. Simple, efficace, durable.</p>
+        <div class="card-footer">
+          <div><span class="price">44,95€</span></div>
+          <a href="https://www.amazon.fr/Logitech-Clavier-Filaire-M%C3%A9canique-Aluminium/dp/B07W6GGRLC/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cooler Master SK620 -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71CZUhyuayS._AC_SX679_.jpg" alt="Cooler Master SK620" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">⌨️</div>
+      <div class="card-body">
+        <span class="card-tag tag-clavier">Clavier Low Profile</span>
+        <div class="stars">★★★★☆</div>
+        <h3>Cooler Master SK620</h3>
+        <p>Switches low-profile ultra-plats, design fin et élégant. Parfait pour les setups minimalistes et les déplacements.</p>
+        <div class="card-footer">
+          <div><span class="price">43,55€</span></div>
+          <a href="https://www.amazon.fr/Cooler-Master-Configuration-Low-Profile-R%C3%A9tro%C3%A9clairage/dp/B098NVDJKB/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Corsair K70 Pro Mini -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71ZXjPzqKLL._AC_SX679_.jpg" alt="Corsair K70 Pro Mini Wireless" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">⌨️</div>
+      <div class="card-body">
+        <span class="card-tag tag-clavier">Clavier 60% Sans-fil</span>
+        <div class="stars">★★★★★</div>
+        <h3>Corsair K70 Pro Mini Wireless</h3>
+        <p>60% sans-fil premium. Switches Cherry MX Speed, batterie 200h, USB-C. La référence des claviers compacts haut de gamme.</p>
+        <div class="card-footer">
+          <div><span class="price">79,99€</span><span class="price-old">95€</span></div>
+          <a href="https://www.amazon.fr/Corsair-Mini-Wireless-Clavier-M%C3%A9canique/dp/B0B5L4VFR4/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Corsair K65 Plus -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71jg2cgJElL._AC_SX679_.jpg" alt="Corsair K65 Plus Wireless" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">⌨️</div>
+      <div class="card-body">
+        <span class="card-tag tag-clavier">Clavier 75% Sans-fil</span>
+        <div class="stars">★★★☆☆</div>
+        <h3>Corsair K65 Plus Wireless</h3>
+        <p>75% sans-fil avec molette multimédia, gasket mount pour un son amorti, batterie longue durée. Un must du gaming sans-fil.</p>
+        <div class="card-footer">
+          <div><span class="price">106,30€</span><span class="price-old">160€</span></div>
+          <a href="https://www.amazon.fr/Corsair-Wireless-Clavier-M%C3%A9canique-Rempla%C3%A7able/dp/B0CTCX3XBQ/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- fin cards claviers -->
+</section>
+
+<!-- ═══════════════ CASQUES ═══════════════ -->
+<section class="cat-section" id="casques">
+  <div class="section-label">🎧 Casques Gaming</div>
+  <h2 class="section-title">Casques & Audio</h2>
+  <div class="cards">
+
+    <!-- Logitech G Pro X SE -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71JKh8hWiwL._AC_SX679_.jpg" alt="Logitech G Pro X SE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🎧</div>
+      <div class="card-body">
+        <span class="card-tag tag-casque">Casque Filaire</span>
+        <div class="stars">★★★★★</div>
+        <h3>Logitech G Pro X SE</h3>
+        <p>Le meilleur casque filaire sous 55€. Drivers 50mm, micro 10mm à annulation de bruit,7.1 compatible PC/PS5/Xbox. Confort exemplaire.</p>
+        <div class="card-footer">
+          <div><span class="price">54,99€</span></div>
+          <a href="https://www.amazon.fr/Logitech-Casque-Gaming-Filaire-Microphone/dp/B0CYJF4KG7/ref=sr_1_4?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-4" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HyperX Cloud III -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/61jzkbL4ZaL._AC_SX679_.jpg" alt="HyperX Cloud III" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🎧</div>
+      <div class="card-body">
+        <span class="card-tag tag-casque">Casque Filaire</span>
+        <div class="stars">★★★★★</div>
+        <h3>HyperX Cloud III</h3>
+        <p>Le meilleur casque filaire sous 60€. Drivers 53mm, micro 10mm à annulation de bruit, compatible PC/PS5/Xbox. Confort exemplaire.</p>
+        <div class="card-footer">
+          <div><span class="price">59,99€</span></div>
+          <a href="https://www.amazon.fr/HyperX-Cloud-III-Black-redHyperX/dp/B0C3BV19Q3/ref=sr_1_10?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-10" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HyperX Cloud III Wireless -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71oBD2JK9WL._AC_SX679_.jpg" alt="HyperX Cloud III Wireless" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🎧</div>
+      <div class="card-body">
+        <span class="card-tag tag-casque">Casque Sans-fil</span>
+        <div class="stars">★★★★★</div>
+        <h3>HyperX Cloud III Wireless</h3>
+        <p>Version sans-fil du Cloud III. 200h de batterie, 2.4GHz ultra-stable, son Hi-Res certifié. Le choix des pros sans budget illimité.</p>
+        <div class="card-footer">
+          <div><span class="price">95,99€</span><span class="price-old">129€</span></div>
+          <a href="https://www.amazon.fr/HyperX-Cloud-III-multiplateforme-dinclinaison/dp/B0F6NZWPTC/ref=sr_1_11?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-11" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Xtrfy H1 -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71HhbLmgCiL._AC_SX679_.jpg" alt="Xtrfy H1" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🎧</div>
+      <div class="card-body">
+        <span class="card-tag tag-casque">Casque Filaire</span>
+        <div class="stars">★★★★☆</div>
+        <h3>Xtrfy H1</h3>
+        <p>Ultra-léger (270g), son très propre et naturel, micro détachable. Conçu pour les sessions longues sans fatigue. Apprécié des joueurs esport.</p>
+        <div class="card-footer">
+          <div><span class="price">71,58€</span></div>
+          <a href="https://www.amazon.fr/CHERRY-XTRFY-Professionnel-Microphones-Interchangeables/dp/B077CDCQ46/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- fin cards casques -->
+</section>
+
+<!-- ═══════════════ SOURIS ═══════════════ -->
+<section class="cat-section" id="souris">
+  <div class="section-label">🖱️ Souris Gaming</div>
+  <h2 class="section-title">Souris & Tapis</h2>
+  <div class="cards">
+
+    <!-- ATTACK SHARK X11SE -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/51rfya-G9aL._AC_SY879_.jpg" alt="ATTACK SHARK X11SE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🖱️</div>
+      <div class="card-body">
+        <span class="card-tag tag-souris">Souris Gaming</span>
+        <div class="stars">★★★★☆</div>
+        <h3>ATTACK SHARK X11SE(4 coloris dispo)</h3>
+        <p>Souris légère FPS avec capteur précis, clicks optiques ultra-rapides, . Forme symétrique confortable pour tous les grips.</p>
+        <div class="card-footer">
+          <div><span class="price">28,04€ </span></div>
+          <a href="https://www.amazon.fr/ATTACK-SHARK-X11SE-Ultra-l%C3%A9g%C3%A8re-Batterie/dp/B0FBFN3G3V/ref=sr_1_7?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1CM9MYM528HEZ&dib=eyJ2IjoiMSJ9.6FhGdeY5IWFDTUK1W3rmlCe0tuN98lqjZWaHmAY7NSxq-0BUi-ZnWA5yFR3hlUYUfNAHmxYjwhT3UYH847TgagwDk2n7eyJVqh80P0m3OIrbLJWOgfFVrBPmUSroT0yq59KnIk8sJpjTWBsmp-JY48kB5_p5o-Zv_V80ypnjGepSajM2FCdKdgBysQE6zX0vDAT9tb4mCVYFjj2PJCdfLqOqkC0FzkbxjtylNLluhUwEL_Jv4CjKDsBEcFimXdafpcxx-z-2kemJHbNqtsCYhO8e-YZ-GM8lDcHCN9saBI0.r7OM_WBx3kcIgGxAMxVf0atZC_QubBdjkWjwtr4Xbqc&dib_tag=se&keywords=ATK%2BA9%2BPlus&qid=1779656427&sprefix=atk%2Ba9%2Bplus%2Caps%2C236&sr=8-7&th=1" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logitech G PRO X SUPERLIGHT 2 -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/515Qr+OxOCL._AC_SX679_.jpg" alt="Logitech G PRO X SUPERLIGHT 2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🖱️</div>
+      <div class="card-body">
+        <span class="card-tag tag-souris">Souris Pro</span>
+        <div class="stars">★★★★★</div>
+        <h3>Logitech G PRO X SUPERLIGHT 2 (OFFRE LIMITE)</h3>
+        <p>Version haut de gamme ultra-légère 60g. Switches optiques, capteur top tier 44k DPI, sans fil 8kHz USB-C. Taille pour les FPS compétitifs.</p>
+        <div class="card-footer">
+          <div><span class="price">84,99€</span></div>
+          <a href="https://www.amazon.fr/Logitech-SUPERLIGHT-LIGHTSPEED-LIGHTFORCE-Programmables/dp/B07W5JKP66/ref=sr_1_24?sr=8-24" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Razer Viper V3 HyperSpeed -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/61zqxqvq+3L._AC_SX679_.jpg" alt="Razer Viper V3 HyperSpeed" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🖱️</div>
+      <div class="card-body">
+        <span class="card-tag tag-souris">Souris Pro</span>
+        <div class="stars">★★★★★</div>
+        <h3>Razer Viper V3 HyperSpeed</h3>
+        <p>La Razer Viper V3 HyperSpeed est une souris gaming sans fil ultra légère offrant une précision exceptionnelle, une réactivité rapide et un confort optimal. Grâce à sa technologie HyperSpeed et son capteur haute performance, elle est parfaite pour les joueurs recherchant vitesse, fluidité et performance en compétition.</p>
+        <div class="card-footer">
+          <div><span class="price">60,56€ </span></div>
+          <a href="https://www.amazon.fr/Razer-Viper-HyperSpeed-dAutonomie-M%C3%A9caniques/dp/B0CBCPB2T1/ref=sr_1_30?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-30" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Razer Gigantus V2 XXL -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71nA7sqyfJL._AC_SX679_.jpg" alt="Razer Gigantus V2 XXL" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🟫</div>
+      <div class="card-body">
+        <span class="card-tag tag-souris">Tapis XXL</span>
+        <div class="stars">★★★★☆</div>
+        <h3>Razer Gigantus V2 XXL x M8</h3>
+        <p>Grand tapis de souris couvrant tout le bureau. Surface lisse pour précision optimale.</p>
+        <div class="card-footer">
+          <div><span class="price">41,29€</span></div>
+          <a href="https://www.amazon.fr/Razer-Gigantus-V2-XXL-Gentlemates/dp/B0FVM9ZZBT/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3DMBRSROII1J0&dib=eyJ2IjoiMSJ9.JeIBzcRAUZGSscNbsj6pZ8wuQmN0a5YI7gH2H2BHRdv0ZhpQJHpnVnnZKmx24BansX4XmgSQfW-AdsKxWIDQbmRB16sobWVpFBRvf0KWqELDxjKzQMqD6Us7l_vFSM_ea07_ZQWW2wh3Ref9Uf9s8Mc6f-78Q92yRQ8p0Fb4IvrqlMPKwgtSdc9-Hf2IOJ3U2u52DvtE_4MDgq7oERvgU5bN2UJoJrfYA9mUQv_SJQ5yEiN5qkiIWLn1lqwhKvrwhhgPYdGf04QuBIZAQyMJYyoQDFpCd2t5TW4W-x64rsc.7mswK8ROFwav0kmH71ppFgqQj3Fkq808_rpamFZiaLI&dib_tag=se&keywords=Tapis+de+souris+control&qid=1779657712&sprefix=tapis+de+souris+control%2Caps%2C230&sr=8-5" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oniverse Obsidian -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71U56TYgGIL._AC_SX679_.jpg" alt="Oniverse Obsidian" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🟫</div>
+      <div class="card-body">
+        <span class="card-tag tag-souris">Tapis XL</span>
+        <div class="stars">★★★★☆</div>
+        <h3>Oniverse Obsidian XL</h3>
+        <p>Tapis de souris en verre trempé.Surface micro-engravée ultra lisse, glisse rapide haute précision, Base antidérapante, Durable et facile à nettoyer.</p>
+        <div class="card-footer">
+          <div><span class="price">30,06€ </span></div>
+          <a href="https://www.amazon.fr/Oniverse-Tapis-souris-gaming-tremp%C3%A9/dp/B0GHNRP77C/ref=sr_1_7?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-7" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- fin cards souris -->
+</section>
+
+<!-- ═══════════════ ÉCRANS ═══════════════ -->
+<section class="cat-section" id="ecrans">
+  <div class="section-label">🖥️ Écrans Gaming</div>
+  <h2 class="section-title">Moniteurs Gaming</h2>
+
+  <p style="color:var(--text2); font-size:0.9rem; margin-bottom:1.5rem;">Full HD · QHD · 4K · Ultrawide</p>
+
+  <div class="cards">
+
+    <!-- Lenovo 24" 240hz -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71CHoZoPezL._AC_SX679_.jpg" alt="Lenovo Legion R24s" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🖥️</div>
+      <div class="card-body">
+        <span class="card-tag tag-ecran">FHD IPS 240Hz</span>
+        <div class="stars">★★★★★</div>
+        <h3>Lenovo Legion R24s</h3>
+        <p>Full HD 1080p, 144Hz, dalle IPS, 1ms. Fluidité extrême pour les FPS compétitifs.</p>
+        <div class="card-footer">
+          <div><span class="price">99,99€ </span><span class="price-old">149€</span></div>
+          <a href="https://www.amazon.fr/Lenovo-Legion-R24s-%C3%89cran-Cable/dp/B0F8DL9P1K/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-2" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AOC 24.5" 400hz -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71F+AxGlfgL._AC_SX679_.jpg" alt="AOC 24G2ZU 240Hz" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🖥️</div>
+      <div class="card-body">
+        <span class="card-tag tag-ecran">FHD 420Hz</span>
+        <div class="stars">★★★★★</div>
+        <h3>AOC 24,5" 420Hz IPS</h3>
+        <p>420Hz pour les joueurs esport les plus exigeants. IPS ultra-réactif, G-Sync Compatible, pied ergonomique complet.</p>
+        <div class="card-footer">
+          <div><span class="price">239,99€</span></div>
+          <a href="https://www.amazon.fr/AOC-Moniteur-25G4KUR-Ajustable-1920x1080/dp/B0FR9SZ8P1/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AOC 24" QHD 180hz -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71iM0caATCL._AC_SX679_.jpg" alt="AOC Q27G3XMN 180Hz" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🖥️</div>
+      <div class="card-body">
+        <span class="card-tag tag-ecran">QHD 180Hz</span>
+        <div class="stars">★★★★☆</div>
+        <h3>AOC 24" QHD 180Hz IPS</h3>
+        <p>1440p QHD + 180Hz : le sweet spot parfait entre qualité d'image et fluidité, G-Sync Compatible. Idéal pour les jeux solo et multijoueur.</p>
+        <div class="card-footer">
+          <div><span class="price">146,99€ </span></div>
+          <a href="https://www.amazon.fr/AOC-Moniteur-Q24G4RE-Compatible-2560x1440/dp/B0F5BW7TT1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1&ref_=as_li_ss_tl" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gigabyte 27" OLED -->
+    <div class="card">
+      <img class="card-img" src="https://m.media-amazon.com/images/I/71hNGDPJlkL._AC_SX679_.jpg" alt="Gigabyte AORUS FO27Q3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-img-placeholder" style="display:none">🖥️</div>
+      <div class="card-body">
+        <span class="card-tag tag-ecran">QHD 240Hz OLED</span>
+        <div class="stars">★★★★★</div>
+        <h3>Gigabyte 27" 240Hz OLED</h3>
+        <p>OLED QHD 240Hz : noirs parfaits, couleurs époustouflantes, réactivité inégalable. L'expérience visuelle ultime.</p>
+        <div class="card-footer">
+          <div><span class="price">398,99€</span><span class="price-old">599€</span></div>
+          <a href="https://www.amazon.fr/GIGABYTE-GO27Q24-Moniteur-Gaming-OLED/dp/B0GMK45595/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" class="btn-sm" target="_blank" rel="noopener sponsored">Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div><!-- fin cards ecrans -->
+</section>
+
+<footer id="contact">
+  <a href="#" class="logo">Gear<span>Zone</span></a>
+  <div class="footer-links">
+    <a href="#">Accueil</a>
+    <a href="#claviers">Claviers</a>
+    <a href="#casques">Casques</a>
+    <a href="#souris">Souris</a>
+    <a href="#ecrans">Écrans</a>
+    <a href="mailto:contact@gearzone.fr">Contact</a>
+    <a href="#">Mentions légales</a>
+  </div>
+  <div class="affiliate-notice">
+    ⚠️ <strong>Liens d'affiliation :</strong> Certains liens sur ce site sont des liens affiliés Amazon. Si tu achètes via ces liens, on touche une petite commission sans coût supplémentaire pour toi. Merci !
+  </div>
+</footer>
+
+</body>
+</html>
